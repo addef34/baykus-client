@@ -14,8 +14,7 @@ namespace baykus_edr_client
         {
             if (args[0] == "kur")
             {
-                Console.Write("Kuruluyor: ");
-                Console.WriteLine(args[1]);
+                Console.WriteLine("Kuruluyor: {0}", args[1]);
                 ajaniKur();
             }
         
@@ -24,7 +23,7 @@ namespace baykus_edr_client
 
         private static void ajaniKur()
         {
-            Process.Start("calc.exe");
+            Process.Start("bins\\logcu.exe -i -accepteula -c {0}", "bins\\logcu-config.xml");
         }
     }
 }
